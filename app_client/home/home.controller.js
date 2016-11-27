@@ -11,4 +11,13 @@ function homeCtrl () {
     vm.sidebar = {
         content: "Thousands of items for sale..."
     };
+
+    vm.data={};
+    vm.data.locations=[{
+        _id:1, name : 'McDonalds', distance : '5 miles', address : '123 main'
+    }, {_id:2, name : 'Burger King', distance : '4 miles', address : '11 main'}]
+
+
+
 }
+

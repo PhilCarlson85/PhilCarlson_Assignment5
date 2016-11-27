@@ -37,11 +37,13 @@ var renderHomepage = function(req, res, responseBody){
 
 /* GET 'home' page */
 module.exports.itemList = function(req, res){
+  console.log('render home page')
   renderHomepage(req, res);
 };
 
 //switching OFF Express routing //
 module.exports.angularApp = function(req, res) {
+  console.log('angular app')
   res.render('layout', {
     title: 'Bidder'
   });
