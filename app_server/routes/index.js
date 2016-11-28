@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var ctrlLocations = require('../controllers/items');
+var ctrlItems = require('../controllers/items');
 
 /* Items list page */
-router.get('/', ctrlLocations.angularApp);
+router.get('/', ctrlItems.angularApp);
 
 module.exports = router;
