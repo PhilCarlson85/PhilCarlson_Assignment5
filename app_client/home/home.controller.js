@@ -21,7 +21,7 @@ function homeCtrl ($http) {
         $http.get('/api/items')
             .success(function (d) {
                 if (d) {
-                    vm.data.items = d;
+                    vm.data.item = d;
                     console.log(vm.data);
                 }
                 console.log(d);

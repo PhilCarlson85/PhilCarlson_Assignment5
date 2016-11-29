@@ -8,18 +8,26 @@
     </div>
 </div>
 
+<div>
+    <h3>
+        <a href>ADD ITEM</a>
+    </h3>
+</div>
+<br>
+
 <div class="row">
     <div class="col-xs-12 col-sm-8">
         <label for="filter">Filter Results</label>
         <input id="filter" type="text", name="filter" ng-model="textFilter">
         <div class="error">{{ vm.message }}</div>
+        <br>
         <div class="row list-group">
-            <div class="col-xs-12 list-group-item" ng-repeat="items in vm.data.items | filter : textFilter">
+            <div class="col-xs-12 list-group-item" ng-repeat="item in vm.data.item | filter : textFilter">
                 <h4>
-                    <a href="/items/"{{ items._id }}>{{ items.name }}</a>
-                    <span class="badge pull-right badge-default">{{ items.startingPrice }}</span>
+                    <a href="/item/"{{ item._id }}>{{ item.name }}</a>
+                    <span class="badge pull-right badge-default">{{ item.startingPrice}}</span>
                 </h4>
-                <p class="description">{{ items.description }}</p>
+                <p class="description">{{ item.description }}</p>
             </div>
         </div>
     </div>
@@ -27,3 +35,4 @@
         <p class="lead">{{ vm.sidebar.content }}</p>
     </div>
 </div>
+
