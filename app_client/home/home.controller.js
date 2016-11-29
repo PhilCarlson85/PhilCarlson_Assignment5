@@ -1,8 +1,11 @@
+//very similar to example on listing 9.8//
 angular
     .module('bidderApp')
     .controller('homeCtrl', homeCtrl);
 
-function homeCtrl (itemData) {
+homeCtrl.$inject = ['$http'];
+
+function homeCtrl ($http) {
     var vm = this;
     vm.pageHeader = {
         title: 'Bidder App',
@@ -13,7 +16,7 @@ function homeCtrl (itemData) {
     };
 
     vm.data = {};
-    vm.getData = function(itemData) {
+    vm.getData = function() {
         console.log("sending request");
         $http.get('/api/items')
             .success(function (d) {
@@ -22,7 +25,10 @@ function homeCtrl (itemData) {
                     console.log(vm.data);
                 }
                 console.log(d);
+            })
+            .error(function (err) {
+                console.log(err);
             });
     };
 
-}
+    vm.getData()};

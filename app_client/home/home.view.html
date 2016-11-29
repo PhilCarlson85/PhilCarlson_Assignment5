@@ -16,10 +16,10 @@
         <div class="row list-group">
             <div class="col-xs-12 list-group-item" ng-repeat="items in vm.data.items | filter : textFilter">
                 <h4>
-                    <a href="/items/"{{ item._id }}>{{ item.name }}</a>
-                    <span class="badge pull-right badge-default">{{ item.startingPrice }}</span>
+                    <a href="/items/"{{ items._id }}>{{ items.name }}</a>
+                    <span class="badge pull-right badge-default">{{ items.startingPrice }}</span>
                 </h4>
-                <p class="description">{{ item.description }}</p>
+                <p class="description">{{ items.description }}</p>
             </div>
         </div>
     </div>
