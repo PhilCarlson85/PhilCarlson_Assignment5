@@ -1,10 +1,10 @@
 <div id="banner" class="page-header">
     <div class="row">
         <div class="col-lg-6"></div>
-           <h1>
-               {{ vm.pageHeader.title }}
-              <small>{{ vm.pageHeader.strapline }}</small>
-           </h1>
+        <h1>
+            {{ vm.pageHeader.title }}
+            <small>{{ vm.pageHeader.strapline }}</small>
+        </h1>
     </div>
 </div>
 
@@ -22,7 +22,7 @@
         <div class="error">{{ vm.message }}</div>
         <br>
         <div class="row list-group">
-            <div class="col-xs-12 list-group-item" ng-repeat="item in vm.data.item | filter : textFilter">
+            <div class="col-xs-12 list-group-item" ng-repeat="item in vm.data.detail | filter : textFilter">
                 <h4>
                     <a href="/item/"{{ item._id }}>{{ item.name }}</a>
                     <span class="badge pull-right badge-default">{{ item.startingPrice}}</span>
@@ -36,4 +36,3 @@
     </div>
     <footer-generic></footer-generic>
 </div>
-
