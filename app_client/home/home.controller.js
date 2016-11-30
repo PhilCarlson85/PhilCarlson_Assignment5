@@ -4,7 +4,6 @@ angular
     .controller('homeCtrl', homeCtrl);
 
 homeCtrl.$inject = ['$http'];
-
 function homeCtrl ($http) {
     var vm = this;
     vm.pageHeader = {
@@ -12,7 +11,7 @@ function homeCtrl ($http) {
         strapline: 'Bid on items for sale online!'
     };
     vm.sidebar = {
-        content: "Thousands of items for sale..."
+        content: "Thousands of items for sale... well just two for now"
     };
 
     vm.data = {};
@@ -32,3 +31,4 @@ function homeCtrl ($http) {
     };
 
     vm.getData()};
+

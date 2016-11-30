@@ -9,5 +9,5 @@ function config ($routeProvider) {
         .otherwise({redirectTo: '/'});
 }
 
-angular.module('bidderApp', ['ngRoute'])
+angular.module('bidderApp', ['ngRoute', 'ui.bootstrap'])
     .config(['$routeProvider', config]);
